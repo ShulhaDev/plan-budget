@@ -1,0 +1,22 @@
+@use '../../styles/extendables';
+
+.items{
+  @extend .r5;
+  height: 120px;
+  background-color: darkslategray;
+  box-shadow: 3px 3px 6px 0 inset rgba(0,0,0,0.7);
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  align-items: center;
+  width: 9rem;
+  color: black;
+  padding: 4px;
+  & > div,span{
+    line-height: 1.2rem;
+    user-select: none;
+    margin: 0;
+    padding: 4px;
+    flex: 1 1 2rem;
+  }
+}

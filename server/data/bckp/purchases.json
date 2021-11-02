@@ -1,0 +1,182 @@
+[
+	{
+		"id": 0,
+		"id_item": 0,
+		"id_store": 1,
+		"price": "1.5",
+		"special": false,
+		"date": "2021-10-06",
+		"amount": "1"
+	},
+	{
+		"id": 1,
+		"id_item": 0,
+		"id_store": 1,
+		"price": "1.39",
+		"special": true,
+		"date": "2021-09-06",
+		"amount": "2"
+	},
+	{
+		"id": 2,
+		"id_item": 0,
+		"id_store": 1,
+		"price": "1.54",
+		"special": false,
+		"date": "2021-10-10",
+		"amount": "1"
+	},
+	{
+		"id": 3,
+		"id_item": 0,
+		"id_store": 2,
+		"price": "1.45",
+		"special": false,
+		"date": "2021-09-21",
+		"amount": "1"
+	},
+	{
+		"id": 4,
+		"id_item": 0,
+		"id_store": 2,
+		"price": "1.45",
+		"special": false,
+		"date": "2021-09-24",
+		"amount": "1"
+	},
+	{
+		"id": 5,
+		"id_item": 0,
+		"id_store": 2,
+		"price": "1.4",
+		"special": true,
+		"date": "2021-10-31",
+		"amount": "2"
+	},
+	{
+		"id": 6,
+		"id_item": 0,
+		"id_store": 3,
+		"price": "1.46",
+		"special": true,
+		"date": "2021-08-29",
+		"amount": "1"
+	},
+	{
+		"id": 7,
+		"id_item": 1,
+		"id_store": 1,
+		"price": "2.1",
+		"special": false,
+		"date": "2021-10-06",
+		"amount": "1.5"
+	},
+	{
+		"id": 8,
+		"id_item": 1,
+		"id_store": 1,
+		"price": "2.2",
+		"special": false,
+		"date": "2021-09-15",
+		"amount": "0.8"
+	},
+	{
+		"id": 9,
+		"id_item": 1,
+		"id_store": 1,
+		"price": "1.54",
+		"special": true,
+		"date": "2021-08-24",
+		"amount": "2.33"
+	},
+	{
+		"id": 10,
+		"id_item": 1,
+		"id_store": 1,
+		"price": "1.8",
+		"special": true,
+		"date": "2021-10-02",
+		"amount": "1.5"
+	},
+	{
+		"id": 11,
+		"id_item": 1,
+		"id_store": 2,
+		"price": "1.45",
+		"special": true,
+		"date": "2021-09-21",
+		"amount": "2.1"
+	},
+	{
+		"id": 12,
+		"id_item": 1,
+		"id_store": 2,
+		"price": "2.0",
+		"special": false,
+		"date": "2021-08-04",
+		"amount": "0.9"
+	},
+	{
+		"id": 13,
+		"id_item": 1,
+		"id_store": 3,
+		"price": "1.46",
+		"special": true,
+		"date": "2021-08-29",
+		"amount": "1"
+	},
+	{
+		"id": 14,
+		"id_item": 2,
+		"id_store": -1,
+		"price": "13.2",
+		"special": true,
+		"date": "2021-09-21",
+		"amount": "1"
+	},
+	{
+		"id": 15,
+		"id_item": 2,
+		"id_store": -1,
+		"price": "15",
+		"special": false,
+		"date": "2021-08-15",
+		"amount": "1"
+	},
+	{
+		"id": 16,
+		"id_item": 2,
+		"id_store": 1,
+		"price": "14.3",
+		"special": false,
+		"date": "2021-10-01",
+		"amount": "1"
+	},
+	{
+		"id": 17,
+		"id_item": 2,
+		"id_store": 1,
+		"price": "12.99",
+		"special": true,
+		"date": "2021-09-12",
+		"amount": "2"
+	},
+	{
+		"id": 19,
+		"id_item": "4",
+		"id_store": "4",
+		"price": 1.35,
+		"amount": 1,
+		"special": true,
+		"date": "2021-10-21"
+	},
+	{
+		"id": 18,
+		"id_item": "3",
+		"id_store": "4",
+		"price": 2.05,
+		"amount": 1,
+		"special": false,
+		"date": "2021-10-21"
+	}
+]

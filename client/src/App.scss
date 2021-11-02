@@ -1,0 +1,95 @@
+html {
+	@media screen and (max-width: 1200px){
+		font-size: 16px;
+	}
+	@media screen and (max-width: 1050px){
+		font-size: 14px;
+	}
+}
+
+span{
+  margin: .2rem;
+}
+
+.r5{
+  border-radius: 5px;
+}
+
+.flying_pane{
+	border-radius: 4px;
+	border: none;
+	box-shadow: 2px 2px 3px 0 rgba(0,0,0,.7);
+	padding: .15rem
+}
+
+main{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+  "side manager";
+	& input {
+    background-color: darkslategray;
+    color: white;
+    padding: 0 3px 3px 10px;
+	@extend .flying_pane;
+	margin: 0 .2rem;
+    font: inherit;
+  }
+}
+
+.manager {
+	grid-area: manager;
+}
+
+.fitting {
+	width: fit-content;
+	height: fit-content;
+}
+
+.plan {
+  background-color: #282c34;
+  padding: 1rem 1rem 1rem 4rem;
+  vertical-align: middle;
+  height: 2rem;
+  color: white;
+  font-size: 1.4rem;
+  box-shadow: 0 5px 10px -1px rgba(50,50,50,0.7) , 0 -2px 6px 0 rgba(0,0,0,.6) inset;
+}
+
+.p5{
+  padding: 5px;
+}
+.p10{
+  padding: 10px;
+}
+.row{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.column{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.wrap{
+  flex-wrap: wrap;
+}
+.centered{
+  text-align: center;
+}
+
+body {
+  background-color: grey;
+  font-family: system-ui,monospace,serif;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  box-shadow: -1px -1px 2px 0 inset black;
+}

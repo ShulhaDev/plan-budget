@@ -1,0 +1,32 @@
+
+.calendar{
+  grid-area: side;
+  height: fit-content;
+  width: fit-content;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+  & .months{
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  & p {
+    margin: .4rem;
+  }
+}
+
+.years{
+  background-color: transparent;
+  border: none;
+  color: khaki;
+  font: inherit;
+  font-size: 1.15rem;
+  text-shadow: 1px 4px 4px black;
+  &:active,&:focus{
+    outline: none;
+    text-shadow: none;
+    box-shadow: 0 0 15px -2px inset silver;
+    border-radius: 4px;
+  }
+  & option{
+    background-color: transparent;
+  }
+}
