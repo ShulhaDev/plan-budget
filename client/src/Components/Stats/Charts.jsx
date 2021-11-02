@@ -158,7 +158,7 @@ const c_date = currentDate();
 			<div className={"manager"}>
 
  				<Panel style={{width: "fit-content"}}>
-				{item ? <Block header={true}>{item.name}</Block> : ''}
+				<Block header={true}>{item?.name || 'Не выбран товар/услуга'}</Block>
 					<Row>
 					<Prices stats = {stats}/>
 					

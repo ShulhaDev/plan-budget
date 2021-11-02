@@ -1,6 +1,6 @@
 import React,{useEffect,useState,useRef} from 'react'
 import {useQuery} from '@apollo/client'
-import {GET_ITEMS,GET_ITEM_NAMES,GET_STORES} from '../../Apollo/queries'
+import {GET_ITEMS,GET_STORES} from '../../Apollo/queries'
 // import Basket from './Basket'
 import Cleaner from '../Common/Cleaner'
 import Options from '../Common/Options'

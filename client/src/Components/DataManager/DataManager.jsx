@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import styles from './DataManager.module.scss'
 import Amount from "../Amount/Amount";
 import Calendar from "../Calendar/Calendar";
-//import {useData} from "../../Apollo/hooks";
 import Panel from "../Common/Panel";
 import Form from "../Common/Form";
 import {useQuery,useMutation} from "@apollo/client";
@@ -29,10 +28,6 @@ const Eraser = styled(Action)`
 const AddNew = styled(Action)`
   color: limegreen;
 `
-
-
-//const getNameById = (id,set) => set.find(it => +it.id === +id)?.name || '';
-//const sortAsc = set => (a,b) => getNameById(a.id_item,set) > getNameById(b.id_item,set) ? 1 : -1
 
 function ItemLine ({line,addNew,options,updateMe,removeMe = () => {},effects={}}) {
     const [sName,setSName] = useState(line ? getNameById(line.id_item,options) : '');
@@ -84,7 +79,6 @@ const other = {
 }
 
 const DataManager = ({date,updateDate}) => {
-    //const {loading,data,error} = useData();
 	const {data} = useContext(DataContext);
     const [store,setStore] = useState('');
     const [stores,setStores] = useState([other]);
@@ -144,8 +138,10 @@ const DataManager = ({date,updateDate}) => {
         setRemove_id(id);
         setTimeout(() => {
 			remove({variables: {id}})
-				.then( ({data}) => { if(data) purchases.refetch(); objD.current = {};})
-			//setSPurchases(prev => prev.filter(pcs => pcs.id !== id));
+				.then( ({data}) => {
+					if(data) purchases.refetch();
+					objD.current = {};
+				})
 			setRemove_id(null)
 		},800);
     }
@@ -171,9 +167,6 @@ const DataManager = ({date,updateDate}) => {
 		.then(res => setSPurchases(prev => [...prev.filter(it => it.id !== id),{...res}].sort(sortPurchasesAsc(names))))
 		.catch(err => alert(err.message))
 	},[sPurchases,update,store,stores,date,names]);
-
-	//if(loading) return <Msg>{`  Загрузка данных, пожалуйста, подождите...`}</Msg>
-    //if(error) return <Msg>{`  Не удалось загрузить данные:`} <span style={{color: "pink"}}>{error.message}</span></Msg>
 
     const list = [<ItemLine initialValue={''} key={''} options={names} addNew={add}/>, 
 				...sPurchases.sort(sortPurchasesAsc(names)).map( pcs => <ItemLine key={pcs.id}
