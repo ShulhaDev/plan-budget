@@ -55,14 +55,14 @@ function App() {
                   Plan Budget <Links>
                   <Anchor className = {location.pathname === '/names' ? "here" : ""} onClick={e => goTo(e, '/names')}>{'Списки'}</Anchor>
                   <Anchor className = {location.pathname === '/basket' ? "here" : ""} onClick={e => goTo(e, '/basket')}>{'Регистрация чека'}</Anchor>
-                  <Anchor className = {location.pathname === '/stats' ? "here" : ""} onClick={e => goTo(e, '/stats')}>{'Статистика'}</Anchor>
+                  <Anchor className = {location.pathname.startsWith('/stats') ? "here" : ""} onClick={e => goTo(e, '/stats/totals')}>{'Статистика'}</Anchor>
               </Links>
               </header>
               <main className={'p10'}>
                   <Switch>
                       <Route path={'/basket'} component={() => <Basket date={date}/>}/>
                       <Route path={'/names'} component={Names}/>
-                      <Route path={'/stats'} component={Stats}/>
+                      <Route path={'/stats/'} component={Stats}/>
                   </Switch>
               </main>
 

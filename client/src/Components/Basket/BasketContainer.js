@@ -55,7 +55,7 @@ const Frame = styled.div`
 	height: 600px;
 	color: white;
 	text-shadow: 1px 1px 2px black;
-	font inherit;
+	font: inherit;
 	border: 4px groove silver;
 	border-radius: 6px;
 	margin: 4px auto;
@@ -79,34 +79,22 @@ const currentDate = () => {
 }
 
 const BasketContainer = () => {
-	const {loading,data,error,refetch} = useData();
+	const {loading,data,error} = useData();
 	const [store,setStore] = useState('');
 	const [stores,setStores] = useState([]);
-	const [names,setNames] = useState([]);
 	const [message,setMessage] = useState(null);
 	const [date,setDate] = useState(currentDate());
-	const items = useQuery(GET_ITEMS,{variables : {filter: { date1: date}}});
+	const items = useQuery(GET_ITEMS,{variables : {filter: { dstart: date}}});
 	const timer = useRef();
 	
 	useEffect(() => {
 		if (data && !data.loading){
 			setStores(data?.stores || []);
-			setNames(data.items)
 		}
 	},[data]);
 	
 	
-	const resetTimer = () => {  clearTimeout(timer.current); timer.current = null;} 
-	
-	const handleBlur = e => {
-		if(!stores.find(st => st.name === store)){
-			setMessage("Данные не найдены");
-			if(timer.current){
-				resetTimer();
-			}
-			timer.current = setTimeout(() => closeMsg(),4000)
-		}
-	}
+	const resetTimer = () => {  clearTimeout(timer.current); timer.current = null;}
 	
 	const resetDate = e => {
 		const val = e.target.value.length ?  e.target.value : currentDate();
@@ -132,7 +120,7 @@ const BasketContainer = () => {
 	console.log(items)
 	return <Content>
 		<span>
-			<span>  Магазин: <input type="text" list={"basket_stores"} value={store} onBlur ={handleBlur} onChange={e => setStore(e.target.value)}/> <Cleaner action={() => setStore('')}/> </span>
+			<span>  Магазин: <input type="text" list={"basket_stores"} value={store} onChange={e => setStore(e.target.value)}/> <Cleaner action={() => setStore('')}/> </span>
 			<span>  Дата: <input type={"date"} value={date} onChange={resetDate}/></span>
 		</span>
 		<Options id={"basket_stores"} list={stores}/>	
