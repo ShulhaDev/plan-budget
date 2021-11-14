@@ -1,5 +1,14 @@
 import gql from "graphql-tag";
 
+const CHECK_TOKEN =gql`
+	query checkToken{
+		res: checkToken{
+			login
+			sex
+		}
+	}
+`
+
 const GET_DATA = gql`
 	query {
 		name: getItems {
@@ -17,6 +26,7 @@ const GET_DATA = gql`
 		}
 	}
 `
+
 
 const GET_ITEMS = gql`
 	query getItems {
@@ -67,6 +77,17 @@ const GET_DATES = gql`
 	}
 `
 
+const LOG_IN = gql`
+	query signIn($credentials: Credentials!) {
+		res: signIn(credentials: $credentials)
+	}
+`
+
+const REGISTER = gql`
+	mutation register($credentials: Credentials!) {
+		res: registration(credentials: $credentials)
+	}
+`
 
 const ADD_ITEM = gql`
     mutation AddItem($payload: InputBase!){
@@ -178,9 +199,11 @@ const removes = {
 
 
 export {
+	CHECK_TOKEN,
 	 GET_DATA, GET_ITEMS, GET_STORES, GET_GROUPS, GET_PURCHASES, GET_DATES,   		  // getters
 	 ADD_ITEM,ADD_STORE, ADD_GROUP, UPSERT_PURCHASE,  // updates
 	 REMOVE_NAME,REMOVE_STORE, REMOVE_GROUP,		  // removes
-	upserts,removes,getters
+	 LOG_IN,REGISTER,
+	 upserts,removes,getters
 }
 

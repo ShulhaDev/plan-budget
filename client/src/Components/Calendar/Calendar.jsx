@@ -35,15 +35,6 @@ const List = styled.div.attrs({
    }
 `
 
-/*const Label = styled.label`
-   margin: 5px;
-   opacity: ${props}
-   color: ${props => props.active ? 'khaki' : (props.color || 'inherit')};
-   transform: scale(${props => props.active ? 1.06 : 1});
-   text-shadow: ${props => props.active ? '3px 2px 3px black' : 'inherit'};
-   font: inherit;
-`*/
-
 const Label = styled.label(props => ({
 	margin: '5px',
 	opacity: props.unused ? '.5' : '1',
@@ -79,7 +70,7 @@ const Calendar = ({id_store,update,fetchDates}) => {
    
    useEffect(()=> refetch(),[id_store,refetch,fetchDates]);
    
-   return <Panel centered={true} style={{height: "fit-content"}}>
+   return <Panel centered={true} className={"side"} style={{height: "fit-content"}}>
       {mode === modes.years
           ? <div> Выберите год:
              <List>

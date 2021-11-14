@@ -1,6 +1,7 @@
 import React,{useState,useCallback} from 'react'
 //import Calendar from "../Calendar/Calendar";
 import DataManager from "../DataManager/DataManager";
+import withAuth from "../../HOCs/withAuth";
 
 const Basket = ({date}) => {
     const [sDate,setSDate] = useState(date);
@@ -10,4 +11,4 @@ const Basket = ({date}) => {
     </>
 }
 
-export default Basket;
+export default withAuth(Basket);

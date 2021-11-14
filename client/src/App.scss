@@ -38,7 +38,12 @@ main{
 }
 
 .manager {
+    margin-top: 4rem !important;
 	grid-area: manager;
+}
+.side{
+    margin-top: 4rem !important;
+    grid-area: side;
 }
 
 .fitting {
@@ -47,6 +52,9 @@ main{
 }
 
 .plan {
+  display: flex;
+  position: fixed;
+  width: calc(100% - 4rem);
   background-color: #282c34;
   padding: 1rem 1rem 1rem 4rem;
   vertical-align: middle;

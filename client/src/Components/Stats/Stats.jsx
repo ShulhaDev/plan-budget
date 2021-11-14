@@ -4,6 +4,7 @@ import Charts from "./Charts"
 import Totals from "./Totals";
 import StatsNavigation from "./StatsNavigation";
 import { Switch,Route} from "react-router-dom";
+import withAuth from "../../HOCs/withAuth";
 
 const side =  () => <StatsNavigation links={links} />;
 
@@ -13,9 +14,7 @@ const links = [
 ];
 
 const Stats = () => {
-    	
 	const {data} = useContext(DataContext);
-
     return <>        
 			<Switch>
 				 <Route path={'/stats/totals'} component={() => <Totals data ={data} side = {side()}/>} />
@@ -26,4 +25,4 @@ const Stats = () => {
     </>
 }
 
-export default Stats
+export default withAuth(Stats);

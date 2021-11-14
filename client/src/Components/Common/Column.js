@@ -8,6 +8,9 @@ const Column = styled.div`
 	& > div{
 		margin: .5rem .5rem;
 	}
+    & > button {
+      margin-bottom: .2rem;
+    }
 `
 
 export default Column

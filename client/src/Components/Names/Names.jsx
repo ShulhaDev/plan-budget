@@ -1,5 +1,6 @@
 import React from "react";
 import OptionsManager from "../OptionsManager/OptionsManager";
+import withAuth from "../../HOCs/withAuth";
 
 const Names = () => {
     return <div className ="manager">
@@ -11,4 +12,4 @@ const Names = () => {
     </div>
 }
 
-export default Names
+export default withAuth(Names)

@@ -29,7 +29,7 @@ const Panel = styled.div.attrs({
 	className: "r5"
 })`
 	background-color: darkcyan;
-	padding: .5rem .5rem 1rem .5rem;
+	padding: .5rem .5rem 1rem .3rem;
 	margin: .3rem;
 	font-size: 1rem;
 	font-family: inherit;
@@ -39,7 +39,7 @@ const Panel = styled.div.attrs({
 	animation-name: ${appearFn(1)};
 	animation-duration: 1s;
 	text-align: ${props => props.centered ? 'center' : 'initial'};
-	box-shadow: 5px 6px 10px -2px #3f3c3c,  -3px -3px 4px 0 inset rgba(10,10,10,0.75),  3px 3px 4px 0 inset rgba(240,240,255,0.4);
+	box-shadow: 5px 6px 10px -2px rgba(20,20,20,0.75),  -3px -3px 4px 0 inset rgba(10,10,10,0.75),  3px 3px 4px 0 inset rgba(240,240,255,0.4);
 	& * {
 		animation-name: ${appearFn(1.3)};
 		animation-duration: 1.3s;
