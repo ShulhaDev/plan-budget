@@ -1,0 +1,18 @@
+[
+	{
+		"login": "JohnDoe",
+		"password": "$2a$07$QmrLjeEdUYeKbW7SMCF4x.VUF77WG/w62E.2bSqYoir.nvIjGTXry",
+		"roles": [
+			"user"
+		],
+		"sex": "male"
+	},
+	{
+		"login": "JaneDoe",
+		"password": "$2a$07$WMUDK3hvVZ8ih0THhdNWzufCcsDZPvJz67zOvtSZ111Z23PZlmGW.",
+		"roles": [
+			"user"
+		],
+		"sex": "female"
+	}
+]
